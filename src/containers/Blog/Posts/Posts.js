@@ -32,7 +32,7 @@ class Posts extends Component{
     }
 
     fullPostUpdateHandler=(id)=>{
-        this.props.history.push({pathname : '/'+id});
+        this.props.history.push( '/posts/'+id);
     }
     render(){
         let posts=<p>Something went wrong</p>
@@ -53,7 +53,7 @@ class Posts extends Component{
                 <section className="Posts">
                     {posts}
                 </section>
-                <Route path="/:id" exact component ={FullPost}/>
+                <Route path="/posts/:id" exact component ={FullPost}/>
             </div>
         );
     }

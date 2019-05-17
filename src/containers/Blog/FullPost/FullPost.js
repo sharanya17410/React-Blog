@@ -29,7 +29,7 @@ class FullPost extends Component {
             }
     }
     deletePostHandler=()=>{
-        axios.delete('https://jsonplaceholder.typicode.com/posts/1'+this.props.match.params.id).then(response=>{
+        axios.delete('https://jsonplaceholder.typicode.com/posts/'+this.props.match.params.id).then(response=>{
             console.log(response);
         });
     }
